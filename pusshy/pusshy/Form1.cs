@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Windows.Forms;
 using System.Diagnostics;
@@ -191,18 +191,7 @@ namespace pusshy
             int intRowIndex = gridHosts.CurrentCell.RowIndex;  
             //Get all values from the row
             string strHost = gridHosts.Rows[intRowIndex].Cells[0].Value.ToString();
-            string strLogin = gridHosts.Rows[intRowIndex].Cells[1].Value.ToString();
-            string strPwd = gridHosts.Rows[intRowIndex].Cells[2].Value.ToString();
-            string strCert = gridHosts.Rows[intRowIndex].Cells[3].Value.ToString();
-            //If the password cell is empty, start the terminal with certificate
-            if (strPwd == "")
-            {
-                strCommand = "\"C:/windows/sysnative/OpenSSH/ssh.exe\" -l " + strLogin + " " + "-i " + strCert + " " + strHost;
-            } else
-            //Or without password
-            {
-                strCommand = "\"C:/windows/sysnative/OpenSSH/ssh.exe\" -l " + strLogin + " " + strHost;
-            }
+            strCommand = "\"C:/windows/sysnative/OpenSSH/ssh.exe\" " + strHost;
             Process.Start("powershell.exe", strCommand);            
         }
     }

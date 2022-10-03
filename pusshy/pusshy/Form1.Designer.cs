@@ -1,4 +1,4 @@
-﻿namespace pusshy
+namespace pusshy
 {
     partial class frmpusshy
     {
@@ -32,9 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmpusshy));
             this.gridHosts = new System.Windows.Forms.DataGridView();
             this.host = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.login = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cert = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuRightColumnClick = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,9 +50,6 @@
             this.gridHosts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridHosts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.host,
-            this.login,
-            this.pwd,
-            this.cert,
             this.descr});
             this.gridHosts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridHosts.Location = new System.Drawing.Point(0, 0);
@@ -71,22 +65,6 @@
             // 
             this.host.HeaderText = "HOST";
             this.host.Name = "host";
-            // 
-            // login
-            // 
-            this.login.HeaderText = "LOGIN";
-            this.login.Name = "login";
-            // 
-            // pwd
-            // 
-            this.pwd.HeaderText = "PWD";
-            this.pwd.Name = "pwd";
-            this.pwd.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // cert
-            // 
-            this.cert.HeaderText = "CERT";
-            this.cert.Name = "cert";
             // 
             // descr
             // 
@@ -160,9 +138,6 @@
         private System.Windows.Forms.ContextMenuStrip menuRightColumnClick;
         private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn host;
-        private System.Windows.Forms.DataGridViewTextBoxColumn login;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pwd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cert;
         private System.Windows.Forms.DataGridViewTextBoxColumn descr;
         private System.Windows.Forms.ContextMenuStrip menuRightRowClick;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
